@@ -11,6 +11,6 @@ public class Lookup {
         JSONObject best = results.getJSONObject(0);
         double lat = best.getDouble("lat");
         double lon = best.getDouble("lon");
-        return new Location(lat, lon);;
+        return new Location(lat, lon);
 	}
 }
