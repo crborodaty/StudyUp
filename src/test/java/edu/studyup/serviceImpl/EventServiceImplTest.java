@@ -159,23 +159,6 @@ class EventServiceImplTest {
 		assertEquals(true, DataStorage.eventData.get(1).getStudents().contains(student));
 	}
 	
-//	@Test
-//	void testAddStudent_DuplicateStudent_BadCase() {
-//		Event event = new Event();
-//		event.setName("Add Duplicate Student Event");
-//		event.setEventID(1);
-//		
-//		Student student = new Student();
-//		student.setFirstName("John");
-//		student.setLastName("Doe");
-//		student.setEmail("JohnDoe@email.com");
-//		student.setId(1);
-//		
-//		Assertions.assertThrows(StudyUpException.class, () -> {
-//			eventServiceImpl.addStudentToEvent(student, event.getEventID());
-//		});	
-//	}
-	
 	@Test
 	void testAddStudent_WrongEventID_BadCase() {
 		Student student = new Student();
