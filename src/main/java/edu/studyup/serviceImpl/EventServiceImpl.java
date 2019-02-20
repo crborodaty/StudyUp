@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import edu.studyup.entity.Event;
 import edu.studyup.entity.Student;
@@ -34,8 +35,8 @@ public class EventServiceImpl implements EventService {
 		Map<Integer, Event> eventData = DataStorage.eventData;
 		List<Event> activeEvents = new ArrayList<>();
 		
-		for (Integer key : eventData.keySet()) {
-			Event ithEvent= eventData.get(key);
+		for (Map.Entry<Integer, Event> entry : eventData.entrySet()) {
+			Event ithEvent = eventData.get(entry.getKey());
 			activeEvents.add(ithEvent);
 		}
 		return activeEvents;
